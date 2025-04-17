@@ -1,34 +1,211 @@
-<!DOCTYPE html><html lang="ko"><head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chaewon Lee | AI‑Driven Storycrafter</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-</head><body>
-<header class="site-header">
-  <h1>Chaewon&nbsp;Lee</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chaewon Lee – Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<section class="hero">
-  <h2>AI랑 잘 노는 마케팅 너드,<br><span class="highlight">Chaewon&nbsp;Lee</span></h2>
-  <p>Problem‑Solver · Storycrafter · Human‑First</p>
-  <div class="cta-buttons">
-     <a class="btn" href="about.html">스토리 보기</a>
-     <a class="btn-outline" href="contact.html">협업 문의</a>
-  </div>
-</section>
+    <style>
+      :root {
+        --navy: #0a0f2b;
+        --mint: #00f5a0;
+        --white: #f9f9f9;
+        --text: #1b1e2e;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--white);
+        color: var(--text);
+        line-height: 1.6;
+      }
+      header {
+        background: var(--navy);
+        color: var(--white);
+        padding: 2rem 1rem 6rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      header h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+      header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+      nav {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 1.5rem;
+      }
+      nav a {
+        color: var(--mint);
+        text-decoration: none;
+        font-weight: 600;
+        transition: opacity 0.2s;
+      }
+      nav a:hover {opacity: 0.7;}
 
-<section class="kpi">
-  <div class="kpi-item"><span class="kpi-number">1,000+</span><br>LinkedIn&nbsp;Followers</div>
-  <div class="kpi-item"><span class="kpi-number">300</span><br>Government Grant Matches</div>
-  <div class="kpi-item"><span class="kpi-number">99%</span><br>Client Satisfaction</div>
-</section>
+      section {
+        max-width: 880px;
+        margin: 4rem auto;
+        padding: 0 1rem;
+      }
+      section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--navy);
+      }
+      .card {
+        background: #fff;
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+        margin-bottom: 2rem;
+      }
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+        gap: 1rem;
+      }
+      .skills-grid span {
+        display: block;
+        background: var(--navy);
+        color: var(--white);
+        padding: 0.6rem 1rem;
+        border-radius: 12px;
+        text-align: center;
+        font-size: 0.95rem;
+      }
+      #contact form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      #contact input, #contact textarea {
+        padding: 1rem;
+        border-radius: 12px;
+        border: 2px solid var(--navy);
+        font-size: 1rem;
+      }
+      #contact button {
+        background: var(--mint);
+        border: none;
+        color: var(--navy);
+        font-weight: 700;
+        padding: 1rem;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: filter 0.2s;
+      }
+      #contact button:hover {filter: brightness(0.9);}
+      footer {
+        text-align: center;
+        padding: 2rem 1rem;
+        font-size: 0.875rem;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Chaewon Lee</h1>
+      <p>Sales Queen • Future AI Marketer • Relentless Experimenter</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-<footer class="site-footer"><p>© 2025 Chaewon Lee</p></footer>
-</body></html>
+    <!-- About -->
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="card">
+        <p>안녕하세요! 1994년생 <strong>이채원</strong>입니다. ADHD 특유의 번뜩이는 집중력과 <em>“존버 정신 TOP 1%”</em> 근성을 무기로, 무엇이든 스스로 익혀 성장해 왔어요. 2025년 들어 AI·노션·코딩을 독학하며 <strong>“대화 → 실제품”</strong> 루트를 개척 중입니다.</p>
+        <p>제 목표는 <strong>사람과 기술을 연결해 수익을 만드는 마케터</strong>가 되는 것. 작은 성공을 빠르게 검증하고, 재미와 실리를 모두 챙기며 앞으로 나아갑니다.</p>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="card">
+        <h3>Top Sales Performer @ Department Store</h3>
+        <p>● 아웃도어·스포츠 브랜드에서 파트타임으로 근무하며 <strong>매출 1위</strong> 달성<br>
+           ● 높은 신뢰감과 탄탄한 피지컬로 고객 설득, 회전율 +45%<br>
+           ● “전설의 알바”로 불리며 신규 브랜드 론칭 시 교육 담당</p>
+      </div>
+      <div class="card">
+        <h3>Government Grant Finder Site (2025)</h3>
+        <p>● 비개발자 최초, 파이썬·Flask·OpenAI API로 **정부지원금 추천 웹사이트** 프로토타입 완성<br>
+           ● 런칭 1주 만에 커뮤니티 조회 3k+ 달성, AI 활용 사례로 인터뷰 제안 진행 중</p>
+      </div>
+      <div class="card">
+        <h3>LinkedIn Growth Hacker</h3>
+        <p>● 한 달 만에 <strong>팔로워 1,000+</strong> 달성 (100% 유기적)<br>
+           ● AI/마케팅 인사이트 포스팅 → 평균 Engagement Rate 8% 기록</p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="card">
+        <div class="skills-grid">
+          <span>Sales & Negotiation</span>
+          <span>Marketing Strategy</span>
+          <span>AI Prompting</span>
+          <span>Python Basics</span>
+          <span>Notion & Automations</span>
+          <span>English (OPIC IH)</span>
+          <span>컴활 1급</span>
+          <span>사회복지사 1급</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <div class="card">
+        <p>▼ More details in my live Notion portfolio.</p>
+        <a href="https://www.notion.so/1d81f1a96dc2800cabc8d8510b3cce98" target="_blank" style="display:inline-block;margin-top:1rem;padding:0.8rem 1.4rem;background:var(--mint);color:var(--navy);font-weight:600;border-radius:12px;text-decoration:none;">Open Notion</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <form action="mailto:haho252@gmail.com" method="post" enctype="text/plain">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" rows="5" placeholder="Say Hi 👋" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Chaewon Lee – Built with ChatGPT o3
+    </footer>
+  </body>
+</html>
