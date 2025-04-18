@@ -35,8 +35,27 @@
         text-align: center;
         position: relative;
       }
-      header h1 {font-size: 2.8rem;font-weight: 700;margin-bottom: .5rem;}
-      header p {font-size: 1.1rem;opacity: .9;margin-bottom: 1.5rem;}
+      header h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: .5rem;
+      }
+      header p {
+        font-size: 1.1rem;
+        opacity: .9;
+        margin-bottom: 1.5rem;
+        max-width: 100%;
+        padding: 0 0.5rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.3rem;
+      }
+      header p span {
+        white-space: nowrap;
+      }
       nav {
         display: grid;
         grid-template-columns: repeat(6, auto);
@@ -57,13 +76,14 @@
 
       @media (max-width: 768px) {
         header {
-          padding: 1.5rem 1rem 1.5rem;
+          padding: 1.5rem 0.5rem 1.5rem;
         }
         header h1 {
           font-size: 2.4rem;
         }
         header p {
-          font-size: 0.9rem;
+          font-size: 0.95rem;
+          line-height: 1.6;
           margin-bottom: 1rem;
         }
         nav {
@@ -124,8 +144,14 @@
   <body>
 
     <header>
-      <h1>Chaewon Lee</h1>
-      <p>Sales Queen • Future AI Marketer • Relentless Experimenter</p>
+      <h1>Chaewon Lee</h1>
+      <p>
+        <span>Sales Queen</span>
+        <span>•</span>
+        <span>Future AI Marketer</span>
+        <span>•</span>
+        <span>Relentless Experimenter</span>
+      </p>
       <nav>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
@@ -138,9 +164,9 @@
 
     <!-- About -->
     <section id="about">
-      <h2>About Me</h2>
+      <h2>About Me</h2>
       <div class="card">
-        <p>안녕하세요! 1994년생 <strong>이채원</strong>입니다. 번뜩이는 집중력과 <em>존버 정신 TOP 1%</em> 근성을 무기로, 무엇이든 스스로 익혀 성장해 왔어요. 2025년 들어 AI·노션·코딩을 독학하며 <strong>"대화 → 실제품"</strong> 루트를 개척 중입니다.</p>
+        <p>안녕하세요! 1994년생 <strong>이채원</strong>입니다. 번뜩이는 집중력과 <em>존버 정신 TOP 1%</em> 근성을 무기로, 무엇이든 스스로 익혀 성장해 왔어요. 2025년 들어 AI·노션·코딩을 독학하며 <strong>"대화 → 실제품"</strong> 루트를 개척 중입니다.</p>
         <p>제 목표는 <strong>사람과 기술을 연결해 수익을 만드는 마케터</strong>가 되는 것. 작은 성공을 빠르게 검증하고, 재미와 실리를 모두 챙기며 앞으로 나아갑니다.</p>
       </div>
     </section>
@@ -179,7 +205,7 @@
       <h2>Skills</h2>
       <div class="card">
         <div class="skills-grid">
-          <span>Sales & Negotiation</span><span>Marketing Strategy</span><span>AI Prompting</span><span>Python Basics</span><span>Notion & Automations</span><span>English (OPIC IH)</span><span>컴활 1급</span><span>사회복지사 1급</span>
+          <span>Sales & Negotiation</span><span>Marketing Strategy</span><span>AI Prompting</span><span>Python Basics</span><span>Notion & Automations</span><span>English (OPIC IH)</span><span>컴활 1급</span><span>사회복지사 1급</span>
         </div>
       </div>
     </section>
@@ -187,8 +213,8 @@
     <!-- Portfolio -->
     <section id="portfolio">
       <h2>Portfolio</h2>
-      <div class="card"><p>▼ More details in my live Notion portfolio.</p>
-        <a href="https://www.notion.so/1d81f1a96dc2800cabc8d8510b3cce98" target="_blank" style="display:inline-block;margin-top:1rem;padding:.8rem 1.4rem;background:var(--mint);color:var(--navy);font-weight:600;border-radius:12px;text-decoration:none;">Open Notion</a>
+      <div class="card"><p>▼ More details in my live Notion portfolio.</p>
+        <a href="https://www.notion.so/1d81f1a96dc2800cabc8d8510b3cce98" target="_blank" style="display:inline-block;margin-top:1rem;padding:.8rem 1.4rem;background:var(--mint);color:var(--navy);font-weight:600;border-radius:12px;text-decoration:none;">Open Notion</a>
       </div>
     </section>
 
@@ -218,14 +244,14 @@
       <h2>Contact</h2>
       <div class="card">
         <form action="mailto:haho252@gmail.com" method="post" enctype="text/plain">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" rows="5" placeholder="Say Hi 👋" required></textarea>
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" rows="5" placeholder="Say Hi 👋" required></textarea>
           <button type="submit">Send Message</button>
         </form>
       </div>
     </section>
 
-    <footer>© 2025 Chaewon Lee – Built with ChatGPT o3</footer>
+    <footer>© 2025 Chaewon Lee – Built with ChatGPT o3</footer>
   </body>
 </html>
